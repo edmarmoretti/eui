@@ -869,7 +869,7 @@ export interface EuiDataGridColumnWidths {
   [key: string]: number;
 }
 // Types for styling options, passed down through the `gridStyle` prop
-export type EuiDataGridStyleFontSizes = 's' | 'm' | 'l';
+export type EuiDataGridStyleFontSizes = 's' | 'm' | 'l' | 'xxs' | 'xs';
 export type EuiDataGridStyleBorders = 'all' | 'horizontal' | 'none';
 export type EuiDataGridStyleHeader = 'shade' | 'underline';
 export type EuiDataGridStyleFooter = 'shade' | 'overline' | 'striped';

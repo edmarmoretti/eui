@@ -5,7 +5,7 @@
  * in compliance with, at your election, the Elastic License 2.0 or the Server
  * Side Public License, v 1.
  */
-
+//Edmar Moretti - inclui opções de fonte xs e xxs
 import { css } from '@emotion/react';
 
 import { UseEuiTheme } from '../../services';
@@ -29,10 +29,14 @@ export const euiDataGridVariables = (euiThemeContext: UseEuiTheme) => {
     lineHeight: {
       s: euiFontSize(euiThemeContext, 'xs').lineHeight,
       m: euiFontSize(euiThemeContext, 'm').lineHeight,
+      xs: euiFontSize(euiThemeContext, 'xs').lineHeight,
+      xxs: euiFontSize(euiThemeContext, 'xxs').lineHeight,
     },
     fontSize: {
       s: euiFontSize(euiThemeContext, 'xs').fontSize,
       m: euiFontSize(euiThemeContext, 's').fontSize,
+      xs: euiFontSize(euiThemeContext, 'xs').fontSize,
+      xxs: euiFontSize(euiThemeContext, 'xxs').fontSize,
     },
     levels: {
       cellPopover: Number(euiTheme.levels.header), // Same z-index as EuiFlyout mask overlays - cell popovers should be under both modal and flyout overlays
@@ -192,7 +196,7 @@ export const euiDataGridStyles = (euiThemeContext: UseEuiTheme) => {
       },
     },
     fontSize: {
-      fontSize: (size: 's' | 'm') => css`
+      fontSize: (size: 's' | 'm' | 'xs' | 'xxs') => css`
         .euiDataGridHeaderCell,
         .euiDataGridRowCell {
           font-size: ${fontSize[size]};
@@ -204,6 +208,12 @@ export const euiDataGridStyles = (euiThemeContext: UseEuiTheme) => {
       },
       get m() {
         return css(this.fontSize('m'));
+      },
+      get xs() {
+        return css(this.fontSize('xs'));
+      },
+      get xxs() {
+        return css(this.fontSize('xxs'));
       },
       get l() {
         // On the Amsterdam theme, the l fontSize is the same as m

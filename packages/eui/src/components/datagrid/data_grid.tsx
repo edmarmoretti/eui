@@ -5,7 +5,7 @@
  * in compliance with, at your election, the Elastic License 2.0 or the Server
  * Side Public License, v 1.
  */
-
+//Edmar Moretti - inclui opções de fonte xs e xxs
 import classNames from 'classnames';
 import React, {
   forwardRef,
@@ -72,12 +72,14 @@ import {
   EuiDataGridStyleRowHover,
 } from './data_grid_types';
 import { euiDataGridStyles } from './data_grid.styles';
-
+//Edmar Moretti - amplia a possibilidade de tipos de fontsize
 // Each gridStyle object above sets a specific CSS select to .euiGrid
 const fontSizesToClassMap: { [size in EuiDataGridStyleFontSizes]: string } = {
   s: 'euiDataGrid--fontSizeSmall',
   m: '',
   l: 'euiDataGrid--fontSizeLarge',
+  xxs: 'euiDataGrid--fontSizeXxSmall',
+  xs: 'euiDataGrid--fontSizeXSmall',
 };
 
 const headerToClassMap: { [header in EuiDataGridStyleHeader]: string } = {
